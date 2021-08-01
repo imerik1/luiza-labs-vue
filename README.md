@@ -1,4 +1,5 @@
 # Projeto feito em VueJs para o teste técnico para Front-End
+### Escolhi fazer em Javascript pois a única vantagem seria a tipagem da requisição dos produtos em Typescript.
 
 ## Instalar depêndencias
 ```
