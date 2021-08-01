@@ -13,8 +13,10 @@
       />
     </div>
   </div>
-  <Header v-else title="MegaNets" :localization="cep.localization" />
-  <router-view></router-view>
+  <template v-else>
+    <Header title="MegaNets" :localization="cep.localization" />
+    <router-view></router-view>
+  </template>
 </template>
 
 <script>
@@ -23,6 +25,15 @@ export default {
   name: "App",
   components: {
     Header,
+  },
+  watch: {
+    $route: {
+      immediate: true,
+      handler(to) {
+        console.log(to);
+        document.title = to.name || "MegaNets";
+      },
+    },
   },
   data() {
     return {
