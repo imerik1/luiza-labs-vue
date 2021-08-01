@@ -1,29 +1,16 @@
-# luiza-labs-vue
+# Projeto feito em VueJs para o teste técnico para Front-End
 
-## Project setup
+## Instalar depêndencias
 ```
 yarn install
 ```
-
-### Compiles and hot-reloads for development
+## Compilar e iniciar ambiente de desenvolvimento
 ```
 yarn serve
 ```
-
-### Compiles and minifies for production
+## Iniciar os testes unitários
 ```
-yarn build
+yarn test
 ```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Verificar a aplicação online
+[Clique aqui](luiza-labs-vue.vercel.app/)
