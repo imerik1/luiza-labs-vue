@@ -1,4 +1,5 @@
 <template>
+  <Breadcrumb :pages="[{ href: '/', breadcrumb: 'Home' }]" />
   <main v-if="!isLoading" className="list">
     <div v-for="product of products" :key="product.sku" className="list__item">
       <div
@@ -30,8 +31,12 @@
 </template>
 
 <script>
+import Breadcrumb from "@/components/Breadcrumb";
 export default {
   name: "Index",
+  components: {
+    Breadcrumb,
+  },
   data() {
     return {
       products: [],
