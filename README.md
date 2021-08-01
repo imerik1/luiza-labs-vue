@@ -13,4 +13,4 @@ yarn serve
 yarn test
 ```
 ## Verificar a aplicação online
-[Clique aqui](luiza-labs-vue.vercel.app/)
+[Clique aqui](https://luiza-labs-vue.vercel.app/)
