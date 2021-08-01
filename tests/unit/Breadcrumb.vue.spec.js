@@ -1,10 +1,10 @@
 import Breadcrumb from "@/components/breadcrumb";
-import { mount } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 
 describe("Breadcrumb - Navegação sobre páginas", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = mount(Breadcrumb, {
+    wrapper = shallowMount(Breadcrumb, {
       propsData: {
         pages: [
           { href: "/", breadcrumb: "Home" },
