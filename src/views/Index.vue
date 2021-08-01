@@ -1,5 +1,5 @@
 <template>
-  <main className="list">
+  <main v-if="!isLoading" className="list">
     <div v-for="product of products" :key="product.sku" className="list__item">
       <div
         :class="`list__item__favorite${
@@ -26,6 +26,7 @@
       </p>
     </div>
   </main>
+  <main v-else>Carregando produtos...</main>
 </template>
 
 <script>
@@ -35,14 +36,16 @@ export default {
     return {
       products: [],
       favorites: [],
+      isLoading: true,
     };
   },
-  created() {
+  mounted() {
     fetch("https://run.mocky.io/v3/66063904-d43c-49ed-9329-d69ad44b885e").then(
       (response) => {
         response.json().then((data) => {
           if (response.status === 200) {
             this.products = { ...data.products };
+            this.isLoading = false;
           }
         });
       }
