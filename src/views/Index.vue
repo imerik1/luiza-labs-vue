@@ -1,10 +1,6 @@
 <template>
   <main className="list">
-    <div
-      v-for="product of products['products']"
-      :key="product.sku"
-      className="list__item"
-    >
+    <div v-for="product of products" :key="product.sku" className="list__item">
       <div
         :class="`list__item__favorite${
           favorites.indexOf(product.sku) !== -1 ? ' enabled' : ''
@@ -46,7 +42,7 @@ export default {
       (response) => {
         response.json().then((data) => {
           if (response.status === 200) {
-            this.products = { ...data };
+            this.products = { ...data.products };
           }
         });
       }
