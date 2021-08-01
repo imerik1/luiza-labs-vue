@@ -30,7 +30,6 @@ export default {
     $route: {
       immediate: true,
       handler(to) {
-        console.log(to);
         document.title = to.name || "MegaNets";
       },
     },
