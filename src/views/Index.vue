@@ -50,8 +50,8 @@ export default {
         response.json().then((data) => {
           if (response.status === 200) {
             this.products = { ...data.products };
-            this.isLoading = false;
           }
+          this.isLoading = false;
         });
       }
     );
