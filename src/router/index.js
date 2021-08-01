@@ -9,12 +9,12 @@ import Index from "../views/Index.vue";
 const routes = [
   {
     path: "/",
-    name: "Index",
+    name: "Página Inicial",
     component: Index,
   },
   {
     path: "/wish-list",
-    name: "WishList",
+    name: "Lista de Desejos",
     component: () => import("../views/WishList.vue"),
   },
 ];
