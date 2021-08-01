@@ -1,4 +1,10 @@
 <template>
+  <Breadcrumb
+    :pages="[
+      { href: '/', breadcrumb: 'Home' },
+      { href: '/wish-list', breadcrumb: 'Lista de Desejos' },
+    ]"
+  />
   <main v-if="products.length > 0 && !isLoading" className="list">
     <div
       v-for="(product, index) of products"
@@ -29,8 +35,12 @@
   <main v-else>Carregando produtos...</main>
 </template>
 <script>
+import Breadcrumb from "@/components/Breadcrumb";
 export default {
   name: "WishList",
+  components: {
+    Breadcrumb,
+  },
   data() {
     return {
       products: [],
