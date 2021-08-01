@@ -1,10 +1,10 @@
 import HomeOptions from "@/components/HomeOptions";
-import { shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 
 describe("HomeOptions - Flex contendo os serviços dos sites", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallowMount(HomeOptions, {
+    wrapper = mount(HomeOptions, {
       propsData: {
         localization: "Praia Grande - SP",
       },
