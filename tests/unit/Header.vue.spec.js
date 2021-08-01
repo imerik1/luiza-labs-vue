@@ -1,10 +1,10 @@
 import Header from "@/components/Header";
-import { shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 
 describe("Header - Header de todas as páginas", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallowMount(Header, {
+    wrapper = mount(Header, {
       propsData: {
         title: "MegaNets",
       },

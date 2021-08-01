@@ -1,10 +1,10 @@
 import OptionList from "@/components/OptionList";
-import { shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 
 describe("OptionsList - Componente que renderiza um dos serviços", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallowMount(OptionList, {
+    wrapper = mount(OptionList, {
       propsData: {
         link: "/",
         description: "Cidade: Praia Grande - SP",
