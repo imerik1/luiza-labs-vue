@@ -53,11 +53,13 @@ export default {
         response.json().then((data) => {
           console.log(response.status);
           if (response.status === 200) {
-            const favorites = localStorage?.getItem("favorites");
-            const products = data.products;
-            for (let product of products) {
-              if (favorites.indexOf(product.sku) !== -1) {
-                this.products.push(product);
+            if (localStorage.getItem("favorites")) {
+              const favorites = localStorage?.getItem("favorites");
+              const products = data.products;
+              for (let product of products) {
+                if (favorites.indexOf(product.sku) !== -1) {
+                  this.products.push(product);
+                }
               }
             }
             this.isLoading = false;
@@ -65,9 +67,6 @@ export default {
         });
       }
     );
-    if (JSON.parse(localStorage.getItem("favorites"))) {
-      this.favorites = JSON.parse(localStorage.getItem("favorites"));
-    }
   },
   methods: {
     clickRemove(e, index, sku) {
