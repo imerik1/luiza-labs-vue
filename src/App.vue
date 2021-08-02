@@ -163,7 +163,8 @@ main
       box-shadow: 0px 0px 28px -12px black
     &__price
       margin-top: 1rem
-      color: #827738
+      font-weight: bold
+      color: #8a7500
     &__remove
       position: absolute
       display: flex
