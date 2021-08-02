@@ -51,7 +51,6 @@ export default {
     fetch("https://run.mocky.io/v3/66063904-d43c-49ed-9329-d69ad44b885e").then(
       (response) => {
         response.json().then((data) => {
-          console.log(response.status);
           if (response.status === 200) {
             if (localStorage.getItem("favorites")) {
               const favorites = localStorage?.getItem("favorites");
